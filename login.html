@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    .scrolling-carousel {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-inner {
+    width: auto;
+  }
+
+  .carousel-item {
+    margin-right: 0;
+  }
+}
+</style>
+</head>
+<body>
+  <section id="places">
+
+    <div class="container">
+      <div class="row flex-md-center">
+        <div class="col-md-11 col-lg-4 py-md-3 px-4 px-md-3 px-lg-0 px-xl-2 order-lg-1">
+          <h1 class="fw-bold fs-md-3 fs-xl-5">Amazing places to enjoy your travel</h1>
+          <hr class="text-primary my-4 my-lg-3 my-xl-4" style="height:3px; width:70px;" />
+          <p class="lh-lg">Etiam facilisis, sapien quis porta dignissim, orci nisi pharetra dui, varius vehicula ligula nulla sit amet lorem. Aenean in vestibulum quam. Cras commodo varius neque, non gravida diam ultrices nec. Cras nulla mauris, fermentum nec libero in.</p><a class="btn btn-lg btn-primary hover-top" href="#" role="button">Explore</a>
+        </div>
+        <div class="col-lg-8 order-lg-0 order-1 px-4 px-md-3 py-8 py-md-3">
+          <div class="carousel slide" id="carouselExampleControlsNoTouching" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row h-100">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/maldives.png" alt="" />
+                      <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-dark-gradient">
+                        <div class="card-body">
+                          <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                          <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                          <h6 class="card-subtitle mb-2 text-muted text-danger">
+                              <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                              Save up to <span class="text-danger">$100</span>
+                          </h6>
+                          <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                          <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                          <p class="card-text"><small class="text-muted">8 Days</small></p>
+                          <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top">
+                      <img class="img-fluid h-100" src="assets/img/gallery/indonesia.png" alt="" />
+                      <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top">
+                      <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row h-100">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/maldives.png" alt="" />
+                      <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/indonesia.png" alt="" />
+                      <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/kathmandu.png" alt="" />
+                      <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-dark-gradient">
+                        <div class="pt-3"><span class="badge bg-primary">$640</span></div>
+                        <div class="ps-3 d-flex justify-content-between align-items-center">
+                          <h5 class="text-white">Kathmandu</h5>
+                          <h6 class="text-600">6 days</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row h-100">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/kathmandu.png" alt="" />
+                      <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-dark-gradient">
+                        <div class="pt-3"><span class="badge bg-primary">$540</span></div>
+                        <div class="ps-3 d-flex justify-content-between align-items-center">
+                          <h5 class="text-white">Kathmandu</h5>
+                          <h6 class="text-600">5 days</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/maldives.png" alt="" />
+                      <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-dark-gradient">
+                        <div class="pt-3"><span class="badge bg-primary">$860</span></div>
+                        <div class="ps-3 d-flex justify-content-between align-items-center">
+                          <h5 class="text-white">Maldives</h5>
+                          <h6 class="text-600">3 days</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card h-100 text-white hover-top"><img class="img-fluid h-100" src="assets/img/gallery/indonesia.png" alt="" />
+                      <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-dark-gradient">
+                        <div class="pt-3"><span class="badge bg-primary">$860</span></div>
+                        <div class="ps-3 d-flex justify-content-between align-items-center">
+                          <h5 class="text-white">Indonesia</h5>
+                          <h6 class="text-600">7 days</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="position-relative mt-5"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+</body>
+</html>

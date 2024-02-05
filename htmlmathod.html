@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Method()</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function(){
+                $("p").html(function(n){
+                return "This p element has index:"+ n;
+            });
+            });
+           
+
+        });
+    </script>
+</head>
+<body>
+    <button>Click to see GET INDEX</button>
+   <p>1st paragraphg</p> 
+   <p>2nd paragraphg</p> 
+   <p>3rd paragraphg</p> 
+   <p>4th paragraphg</p> 
+   <p>5th paragraphg</p> 
+   <h1>This is H1 tag</h1>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Method</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("p").mouseenter(function(){
+            $("p").html("Mouse Enter")
+            $("p").css("background-color","yellow")
+        });
+        $("p").mousedown(function(){
+            $("p").html("Mouse Down")
+            $("p").css("background-color","gray")
+        });
+        $("p").mouseleave(function(){
+            $("p").html("Mouse leave")
+            $("p").css("background-color","blue")
+        });
+        $("p").mousemove(function(){
+            $("p").html("Mouse Moved")
+            $("p").css("background-color","aqua")
+        });
+        $("p").mouseout(function(){
+            $("p").html("Mouse Out")
+            $("p").css("background-color","red")
+        });
+        $("p").mouseover(function(){
+            $("p").html("Mouse Over")
+            $("p").css("background-color","green")
+        });
+        $("p").mouseup(function(){
+            $("p").html("Mouse Up")
+            $("p").css("background-color","white")
+        });
+        $("p").dblclick(function(){
+            $("p").html("Mouse Double Clicked")
+            $("p").css("background-color","pink")
+        })
+        });
+    </script>
+    <style>
+        p{
+            color: black;
+            font-size: xx-large;
+            font-family: sans-serif;
+        }
+    </style>
+  
+</head>
+<body>
+  
+  <p>Mouse Events</p>
+    <h1>Mouse Method</h1>
+
+ 
+</body> 
+</html>

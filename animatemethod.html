@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+var x = 0;
+$(document).ready(function(){
+  $("#btn").click(function(){
+    $("#box").animate({height:"500px"},
+    {
+        duration:500,
+        // complete:function(){
+        //     $(this).after("<p>Animation is Completed</p>");
+        // }
+    }
+    
+    ); 
+    $("#box").animate({width:"500px"},
+    {
+        duration:500,
+        // complete:function(){
+        //     $(this).after("<p>Animation is Completed</p>");
+        // }
+    }
+    
+    );
+    $("#box").animate({height:"100px"},
+    {
+        duration:500,
+        // complete:function(){
+        //     $(this).after("<p>Animation is Completed</p>");
+        // }
+    }
+    
+    );
+    $("#box").animate({width:"100px"},
+    {
+        duration:500,
+        // complete:function(){
+        //     $(this).after("<p>Animation is Completed</p>");
+        // }
+    }
+    
+    );
+  });
+  
+});
+</script>
+</head>
+<body>
+
+<button id="btn" style="margin-left: 2%;">Start Animation non this box.</button>
+<div id="box" style="background-color: aqua;height: 100px;width: 100px; margin: 2%;"></div>
+</body>
+</html>

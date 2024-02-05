@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Travel Planner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add submit event listener to the form
+            $("#loginForm").submit(function (e) {
+                // Validate email
+                e.preventDefault();
+                var email = $('#email').val();
+        var password = $('#password').val();
+        $(".error").remove();
+        if(email.length < 3)
+    {
+        $('#email').after('<span class="error text-danger">This field is required</span>');
+    }
+    else{
+        var patt=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var a= patt.test(email);
+        if(!a)
+        {
+            $('#email').after('<span class="error text-danger">Enter valid Email Address</span>');
+        }
+    }
+    if(password.length < 3)
+    {
+        $('#password').after('<span class="error text-danger">This field is required</span>');
+    }
+    else{
+        var patts = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}/;
+        var b = patts.test(password);
+        if(!b)
+        {
+            $('#password').after('<span class="error text-danger">Enter valid password </span>');
+        }
+    }
+});
+});    
+                   
+                
+
+              
+    </script>
+   
+    <style>
+        body {
+    background-color: #f8f9fa;
+      background-image: url(); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust the background size as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height:100% ;
+    /* color: #fff; */
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.card {
+            background-color: transparent;
+            box-shadow: 0 4px 8px rgba(55, 161, 41, 0.1);
+            border: 1px solid rgb(200, 187, 187);
+        }
+.travel-header {
+    background-color: #19b6c8; /* Unique color for Travel Planner heading */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.login-header {
+    /* background-color: #007bff; Color for Login Page heading */
+    color: black;
+    text-align: center;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #19b6c8;
+    border-color: #19b6c8;
+}
+
+.btn-primary:hover {
+    background-color: #08343d;
+    border-color: #08343d;
+}
+label{
+    color: #060708;
+    font-weight: bolder;
+    
+}
+
+    </style>
+   
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header travel-header"> <!-- Apply travel-header class -->
+                    <h4>Travel Planner</h4>
+                </div>
+                <div class="card-header login-header"> <!-- Apply login-header class -->
+                    <h4>Login to Your Account</h4>
+                </div>
+                <div class="card-body">
+                    <form id="loginForm" novalidate>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="form-control" id="email" name="email" style="background-color: transparent;">
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" style="background-color: transparent;">
+                            <div class="invalid-feedback">Please enter your password.</div>
+                        </div>
+                        <div class="form-group form-check d-flex justify-content-between">
+                            <div>
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember Me</label>
+                            </div>
+                            <a href="forgot_password.html">Forgot Password?</a>
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-block" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.js"></script> <!-- Custom JavaScript for form validation -->
+</body>
+</html>

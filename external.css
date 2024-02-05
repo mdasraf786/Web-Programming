@@ -1,0 +1,98 @@
+
+body {
+    background-color: #f8f9fa;
+    background-image: url(); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh; /* Set the height to the viewport height */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    margin-top: 30px;
+}
+
+.card {
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(55, 161, 41, 0.1);
+    
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #19b6c8;
+    border-color: #19b6c8;
+}
+
+.btn-primary:hover {
+    background-color: #08343d;
+    border-color: #08343d;
+}
+
+.card-header:hover{
+    transform: scale(1.5);
+}
+.card-header{
+    transition: transform 5s;
+}
+
+.travel-header {
+background-color: #19b6c8; /* Unique color for Travel Planner heading */
+color: #fff;
+text-align: center;
+padding: 15px;
+}
+    @keyframes asraf {
+        0%   {left:0px; top:0px;}
+        25%  {left:200px; top:0px;}
+        50%  { left:-200px; top:0px;}
+        75%  {left:200px; top:0px;}
+        100% {background-color:transparent;  left:0px; top:0px;}
+      }
+
+.card{
+    animation-name: asraf;
+    animation-duration: 1s;
+}
+.reg-header{
+color: black;
+text-align: center;
+padding: 15px;
+}
+input{
+border: solid greenyellow;
+}
+label{
+color: #060708;
+font-weight: bolder;
+font-family: sans-serif;
+
+}
+
+
+.navbar {
+    background-color: #3498db; /* Change the background color as needed */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* Change the font color as needed */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff !important; /* Change the font color as needed */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ecf0f1 !important; /* Change the hover color as needed */
+}

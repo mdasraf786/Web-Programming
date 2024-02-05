@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+var x = 0;
+$(document).ready(function(){
+ $(".fout").click(function(){
+ $("p").fadeOut("fast");
+ });
+ $(".fin").click(function(){
+ $("p").fadeIn("slow");
+ });
+ $(".ftoggle").click(function(){
+ $("p").fadeToggle("slow");
+ });
+ $(".fto").click(function(){
+ $("p").fadeTo("slow",0.2);
+ });
+});
+</script>
+</head>
+<body>
+<div>
+    <p>The jquery fadeIn() method is used to fade in a hidden element.</p>
+<p>The jquery fadeOut() method is used to fade out a visible element.</p>
+
+</div>
+<button class="fout">Fade Out</button>
+<button class="fin">Fade In</button>
+<button class="ftoggle">Fade Toggle</button>
+<button class="fto">Fade To</button>
+
+
+</body>
+</html>

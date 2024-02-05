@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#button").click(function(){
+            $("img").attr({width:"250",height:"100"});
+        });
+        
+        });
+    </script>
+</head>
+<body>
+   <img src="jquery.png" alt="" width="500" height="200"> 
+   <div class="d1">
+    <button id="button">Select to minimize image</button>
+   </div>
+ 
+</body> 
+</html>
