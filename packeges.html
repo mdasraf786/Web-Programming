@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       .jumbotron {
+            background-image: url('your-background-image.jpg'); /* Set your background image URL */
+            background-size: cover;
+            color: #ffffff; /* Set text color on the jumbotron */
+        }
+
+        .feature-box {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .carousel-inner img {
+            width: 100%; /* Make images fill the container */
+            height: 400px; /* Set a fixed height for the carousel */
+            object-fit: cover; /* Ensure images maintain aspect ratio */
+        }
+         /* Add custom styles here */
+         .navbar-nav .nav-link.active {
+        font-weight: bold;
+        color: black;
+    }
+    .navbar-brand {
+    font-size: 24px; /* Change the font size to your desired value */
+    }
+
+        body {
+            background-color: #f8f9fa; /* Set background color */
+            color: #343a40; /* Set text color */
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    
+}
+  
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav .nav-link {
+    font-weight:500;
+    font-size: 18px;
+}
+       
+        .contact-section {
+            padding: 80px 0;
+            background-color: #2caab3;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .message-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-section {
+            padding: 80px 0;
+            background-color: #17a2b8;
+            
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #f5ebeb;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: color 1s ease-in-out;
+            border-radius: 50%;
+        }
+
+        
+        .social-icons a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover i.fab.fa-facebook {
+    color: #1844d5; /* Sky Blue */
+}
+
+.social-icons a:hover i.fab.fa-twitter {
+    color: #1E90FF; /* Dodger Blue */
+}
+
+.social-icons a:hover i.fab.fa-instagram {
+    color: #FF69B4; /* Hot Pink */
+}
+
+.social-icons a:hover i.fab.fa-linkedin {
+    color: #000080; /* Navy Blue */
+}
+
+.social-icons a:hover i.fab.fa-github {
+    color: #333; /* Default GitHub color */
+}
+
+        .message-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+   
+        .dropdown-menu {
+        background-color: white;
+        color: black;
+        font-size: 16px; /* Adjust font size as needed */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+    }
+
+    .dropdown-item:hover {
+       /* Light hover effect */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+    }
+   
+/* Image Section Styling */
+.image-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.image-section img {
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  }
+
+/* Form Section Styling */
+.form-section {
+  padding: 30px;
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+}
+.reservation-section {
+  margin-top: 50px; /* Adjust margin top as needed */
+}
+
+
+/* Booking Section Styling */
+@media (max-width: 768px) {
+  .booking-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-section,
+  .form-section {
+    padding: 20px;
+  }
+  #heading{
+   padding: 20px;
+  }
+}
+#navbar {
+  z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.heading-wrapper {
+  margin-top: 70px; /* Adjust margin top as needed to clear navbar */
+  text-align: center;
+}
+input[type=text],input[type=date],input[type=text],input[type=number],input[type=email]{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1.5px solid rgb(132, 214, 224);
+}
+#heading{
+  font-family: Comic Sans MS,cursive;
+  font-size: 50px;
+  font-weight: 400;
+}
+a{
+  font-family:Comic Sans MS,cursive;
+}
+.nav-link{
+  font-weight: bolder;
+}
+
+    /* Unique CSS for each card */
+    .hotel-card {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .flight-card {
+      background-color: #eaf1ff;
+      color: #0047b3;
+    }
+
+    .train-card {
+      background-color: #d5e8d4;
+      color: #006600;
+    }
+
+    .food-card {
+      background-color: #ffeee6;
+      color: #ff6600;
+    }
+
+    .safety-card {
+      background-color: #ffeb99;
+      color: #cc7a00;
+    }
+
+    .adventure-card {
+      background-color: #f2f2f2;
+      color: #666666;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  .card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  #d1,#d2{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Box shadow for login button */
+    }
+    .featured-tours {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.featured-tours h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.featured-tours p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.featured-tours .card {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.featured-tours .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+.featured-tours .card-title {
+    margin-bottom: 10px;
+}
+.featured-tours .card-subtitle {
+    margin-bottom: 20px;
+}
+.featured-tours .card-text span {
+    color: #f00;
+    font-weight: bold;
+}
+.featured-tours .card-text del {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.featured-tours .card-text small {
+    font-size: 14px;
+}
+.feature-box {
+            opacity: 0;
+            transform: translateY(500px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .feature-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feature-box:hover {
+            transform: scale(1.1);
+        }
+
+  
+        .feature-box:hover i {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg  navbar-light bg-info fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-globe"style="font-size:30px;"></i> Adventour</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link fs-1" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.html">Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servises.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-user-circle"></i> <!-- FontAwesome user-circle icon -->
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                      <div class="dropdown-header text-center">
+                          <div class="row justify-content-center align-items-center">
+                              <div class="col-12 text-center">
+                                  <img src="travel.1.jpeg" class="rounded-circle img-fluid" style="max-width: 80px; height: auto;" alt="User Image">
+                              </div>
+                          </div>
+                          <div class="row justify-content-center align-items-center">
+                              <div class="col-12 text-center">
+                                  <a href="#" class="btn btn-light btn-sm mt-2 text-info shadow" id="b1"><i class="fas fa-sign-in-alt text-dark"></i> Login</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                      <a class="dropdown-item" href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                      <a class="dropdown-item text-info" href="#"><i class="fas fa-sign-out-alt text-dark"></i> Log Out</a>
+                  </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid text-center mt-5">
+  <div class="container ">
+      
+          <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Your <span class="text-info" id="booking"></span> Awaits</h1>
+      <p class="lead" style="color:black;font-family:Comic Sans MS,cursive;">Current Travel Provided By Our Agency</p>
+      <a class="btn btn-primary btn-lg" href="#book" role="button">Book Now</a>
+      </div>
+      
+      
+  </div>
+</div> 
+
+  <section class="featured-tours">
+    <div class="container">
+        <h2 ><span class="text-info" style="color:black;font-family:Comic Sans MS,cursive;">A</span>vailable <SPAN class="text-info">P</SPAN>ackages</h2>
+        <p >Collette travelers choose from 160 tours across all 7 continents, as well as 5 travel styles including small group touring and destination spotlights. Check out some trending tours for inspiration on your next adventure.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary " id="d1">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-info shadow">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary  shadow">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
+                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-danger">
+                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
+                            Save up to <span class="text-danger">$100</span>
+                        </h6>
+                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
+                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
+                        <p class="card-text"><small class="text-muted">8 Days</small></p>
+                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-info shadow">Reserved Now</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="text-center py-4 ">
+  <section class="contact-section bg-info-subtle">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="contact-details text-center">
+                      <h2><SPAN class="text-light">C</SPAN>ontact <SPAN class="text-light">U</SPAN>s</h2>
+                      <p>We'd love to hear from you. Reach out to us using the contact details below or send us a message.</p>
+                      <ul class="list-unstyled">
+                          <li><i class="fas fa-phone"></i> Phone: +7781826301</li>
+                          <li><i class="fas fa-envelope"></i> Email: info@example.com</li>
+                      </ul>
+                  </div>
+  
+                  <div class="social-icons text-center">
+                      <a href="#" target="_blank" class="btn btn-outline-light btn-social"><i class="fab fa-facebook"></i></a>
+                      <a href="#" target="_blank" class="btn btn-outline-light btn-social"><i class="fab fa-twitter"></i></a>
+                      <a href="#" target="_blank" class="btn btn-outline-light btn-social"><i class="fab fa-github"></i></a>
+                      <a href="#" target="_blank" class="btn btn-outline-light btn-social"><i class="fab fa-instagram"></i></a>
+                      <a href="#" target="_blank" class="btn btn-outline-light btn-social"><i class="fab fa-linkedin"></i></a>
+                  </div>
+  
+                  <div class="message-box mt-2">
+                      <form id="contactForm" novalidate>
+                          <div class="form-group">
+                              <label for="name">Your Name:</label>
+                              <input type="text" class="form-control" id="name" name="name" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="email">Your Email:</label>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="message">Your Message:</label>
+                              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary btn-block btn btn-outline-light btn-social">Send Message</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+     
+  </section>
+ 
+  
+  
+  
+</footer>
+
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- <div id="loginModal" class="modal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+
+          
+          <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button type="button" class="close" data-dismiss="modal" onclick="toggleLoginModal()">&times;</button>
+          </div>
+
+         
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                      <label for="username">Username:</label>
+                      <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Login</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<script>
+$(document).ready(function(){
+    var text = "Pacakeges";
+    var index = 0;
+    var interval = setInterval(function() {
+        $('#booking').append(text[index]);
+        index++;
+        if (index >= text.length) {
+            setTimeout(function() {
+                $('#booking').empty(); // Empty the content after a delay
+                index = 0; // Reset the index to start the animation again
+            }, 300); // Delay before emptying the content (adjust as needed)
+        }
+    }, 300); // Change the duration (in milliseconds) to adjust the typing speed
+});
+  document.addEventListener("DOMContentLoaded", function () {
+      // Add 'show' class to each feature box after the page is loaded
+      const featureBoxes = document.querySelectorAll(".feature-box");
+      featureBoxes.forEach(box => box.classList.add("show"));
+  });
+  
+   // Display the login modal and blur the background on page load
+   window.onload = function () {
+      toggleLoginModal();
+  };
+
+  // Toggle the login modal
+  function toggleLoginModal() {
+      var modal = document.getElementById("loginModal");
+      document.body.classList.toggle("blur-background");
+      modal.style.display = modal.style.display === "block" ? "none" : "block";
+  }
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function (event) {
+      var modal = document.getElementById("loginModal");
+      if (event.target == modal) {
+          toggleLoginModal();
+      }
+  };
+  $(document).ready(function() {
+      // When mouse enters the user icon or the dropdown menu
+      $('.nav-item.dropdown').on('mouseenter', function() {
+          // Show the dropdown menu
+          $(this).find('.dropdown-menu').slideDown(500);
+      });
+
+      // When mouse leaves the user icon or the dropdown menu
+      $('.nav-item.dropdown').on('mouseleave', function() {
+          // Hide the dropdown menu
+          $(this).find('.dropdown-menu').slideUp(500);
+      });
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+      var homeLink = document.querySelector(".navbar-nav .nav-item.active .nav-link");
+      var navLinks = document.querySelectorAll(".navbar-nav .nav-link:not(.fs-1)");
+
+      navLinks.forEach(function(link) {
+          link.addEventListener("click", function() {
+              // Remove active class from all links except home link
+              navLinks.forEach(function(item) {
+                  item.classList.remove("active");
+              });
+
+              // Add active class to the clicked link
+              this.classList.add("active");
+          });
+      });
+  });
+  
+</script>
+</body>
+</html>

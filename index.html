@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Add custom styles here */
+        .navbar-nav .nav-link.active {
+        font-weight: bold;
+        color: black;
+    }
     .navbar-brand {
     font-size: 24px; /* Change the font size to your desired value */
     }
@@ -47,7 +51,7 @@
             margin-bottom: 20px;
             background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         .carousel-inner img {
             width: 100%; /* Make images fill the container */
@@ -71,13 +75,15 @@
             color: #333;
             font-size: 24px;
             margin-right: 15px;
+            border-radius: 50%;
+            
         }
 
         .message-box {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         .contact-section {
             padding: 80px 0;
@@ -96,39 +102,42 @@
             color: #333;
             font-size: 24px;
             margin-right: 15px;
-            transition: color 0.3s ease-in-out;
+               border-radius: 50%;
+               
+            
         }
 
         
-        .social-icons a:hover {
+.social-icons a:hover {
     transition: color 0.3s ease-in-out;
 }
 
 .social-icons a:hover i.fab.fa-facebook {
-    color: #1cc3d8; /* Sky Blue */
+    color:#1877f2; /* Sky Blue */
+   
 }
 
 .social-icons a:hover i.fab.fa-twitter {
-    color: #1E90FF; /* Dodger Blue */
+    color: #1da1f2; /* Dodger Blue */
 }
 
 .social-icons a:hover i.fab.fa-instagram {
-    color: #FF69B4; /* Hot Pink */
+    color: rgb(209, 19, 130); /* Hot Pink */
 }
 
 .social-icons a:hover i.fab.fa-linkedin {
-    color: #000080; /* Navy Blue */
+    color: rgb(32, 120, 228);/* Navy Blue */
 }
 
 .social-icons a:hover i.fab.fa-github {
-    color: #333; /* Default GitHub color */
+    color: white/* Default GitHub color */
 }
 
         .message-box {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
     .featured-tours {
@@ -145,11 +154,11 @@
 }
 .featured-tours .card {
     border: none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
 }
 .featured-tours .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
 }
 .featured-tours .card-title {
     margin-bottom: 10px;
@@ -169,8 +178,45 @@
 .featured-tours .card-text small {
     font-size: 14px;
 }
+.feature-box {
+            opacity: 0;
+            transform: translateY(500px);
+            transition: opacity 1s, transform 1s;
+        }
 
+        .feature-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feature-box:hover {
+            transform: scale(1.1);
+        }
 
+  
+        .feature-box:hover i {
+            transform: scale(1.1);
+        }
+        .dropdown-menu {
+        background-color: white;
+        color: black;
+        font-size: 16px; /* Adjust font size as needed */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+    }
+
+    .dropdown-item:hover {
+       /* Light hover effect */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+    }
+    #d1,#d2{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Box shadow for login button */
+    }
+
+    a{
+  font-family:Comic Sans MS,cursive;
+}
+#heading{
+  font-family:Comic Sans MS,cursive;
+}
     </style>
 </head>
 <body>
@@ -185,27 +231,42 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link fs-1" href="#">Home</a>
+                    <a class="nav-link fs-1" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Book</a>
+                    <a class="nav-link" href="booking.html">Book</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Packages</a>
+                    <a class="nav-link" href="packeges.html">Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="servises.html">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Gallery</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link profile-icon" href="#">
-                        <i class="fas fa-user-circle" ></i> <!-- FontAwesome user-circle icon -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> <!-- FontAwesome user-circle icon -->
                     </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <div class="dropdown-header text-center">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 text-center">
+                                    <img src="travel.1.jpeg" class="rounded-circle" style="width: 80px; height: 80px;" alt="User Image">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 text-center">
+                                    <a href="#" class="btn btn-light btn-sm mt-2 text-info shadow" id="b1"><i class="fas fa-sign-in-alt text-dark"></i> Login</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                        <a class="dropdown-item" href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                        <a class="dropdown-item text-info" href="#"><i class="fas fa-sign-out-alt text-dark"></i> Log Out</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -215,11 +276,11 @@
 <!-- Jumbotron -->
 <div class="jumbotron jumbotron-fluid text-center mt-5">
     <div class="container ">
-        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="1500">
             <div class="carousel-inner">
                 <!-- Add your images here -->
                 <div class="carousel-item active">
-                    <img src="image7.jpg" class="d-block w-100" alt="Image 1">
+                    <img src="a.jpg" class="d-block w-100" alt="Image 1">
                 </div>
                 <div class="carousel-item">
                     <img src="b.jpg" class="d-block w-100" alt="Image 2">
@@ -229,6 +290,9 @@
                 </div>
                 <div class="carousel-item">
                     <img src="d.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="e.jpg" class="d-block w-100" alt="Image 2">
                 </div>
                 <!-- Add more images as needed -->
             </div>
@@ -240,10 +304,11 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-            <h1 class="display-4" style="color:black">Your Adventure Awaits</h1>
-        <p class="lead" style="color:black">Current Travel Provided By Our Agency</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Explore Now</a>
+            <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Current Travel To  <span id="country" class="text-info" style="font-family:Comic Sans MS,cursive;">Loading...</span> 
+        <p class="lead mb-0 mt-2" style="color:black;font-family:Comic Sans MS,cursive;">Your Adventure Awaits </p>
+        <a class="btn btn-primary btn-lg mt-0" href="#" role="button">Book Now</a>
         </div>
+        
         
     </div>
 </div>
@@ -251,14 +316,20 @@
 
 
 <!-- Features Section -->
-<div class="container mt-5">
+<div class="container mt-5" id="pack">
+    <div class="row">
+        <div class="col">
+            <b><h1 class=" mt-1 mb-5 text-center" id="heading" style="color:black;font-family:Comic Sans MS,cursive;"><span class="text-info">O</span>ur <span class="text-info">F</span>acilities</h1></b>
+            <p class="mb-5 mt-1 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore amet dolorum quis, veniam deleniti sequi, ut praesentium cupiditate modi ipsum necessitatibus? Alias, libero. Eius officiis quasi, ab ipsum quisquam necessitatibus.</p>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-4">
             <div class="feature-box">
                 <i class="fa-sharp fa-solid fa-magnifying-glass text-info" style="font-size:100px;"></i>
                 <h2>Explore</h2>
                 <p>Discover new and exciting places around the world. Our curated list of destinations ensures an unforgettable experience.</p>
-                <a href="#" class="btn btn-light btn-block mt-3 text-info shadow">Explore Now</a>
+                <a href="#" class="btn btn-light btn-block mt-3 text-info " id="d1">Explore Now</a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -266,7 +337,7 @@
                 <i class="fa-solid fa-book text-info" style="font-size:100px;"></i>
                 <h2>Book</h2>
                 <p>Easy and secure booking process. Reserve your spot and start counting down the days to your next adventure.</p>
-                <a href="#" class="btn btn-light btn-block mt-3 text-info shadow">Book Now</a>
+                <a href="#" class="btn btn-light btn-block mt-3 text-info " id="d1">Book Now</a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -274,7 +345,7 @@
                 <i class="fa-solid fa-bell-concierge text-info" style="font-size:100px;padding-left:15px;"></i>
                 <h2>Services</h2>
                 <p>Tailor your trip to your preferences. Choose activities, accommodations, and more to create a personalized itinerary.</p>
-                <a href="#" class="btn btn-light btn-block mt-3 text-info shadow text-bold">Use Now</a>
+                <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
             </div>
         </div>
     </div>
@@ -282,111 +353,7 @@
 
 
 
-<section class="featured-tours">
-    <div class="container">
-        <h2><span class="text-info">F</span>eatured <SPAN class="text-info">T</SPAN>ours</h2>
-        <p>Collette travelers choose from 160 tours across all 7 continents, as well as 5 travel styles including small group touring and destination spotlights. Check out some trending tours for inspiration on your next adventure.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span><br>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-info shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-primary  shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="image7.jpg" class="card-img-top" alt="Image 1">
-                        <h5 class="card-title">NEW TOUR CLASSIC</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-danger">
-                            <span class="star-icon text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            Save up to <span class="text-danger">$100</span>
-                        </h6>
-                        <h3 class="card-text">Only <span class="text-info">$3,599 </span> <del>$3,699 </del></h3>
-                        <p class="card-text">Historical Greenbrier featuring Washington D.C. & Williamsburg</p>
-                        <p class="card-text"><small class="text-muted">8 Days</small></p>
-                        <button type="button" class="btn btn-light btn-lg btn-block mt-3 text-info shadow">Reserved Now</button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
+
 
 <!-- Footer -->
 <footer class="text-center bg-info py-4">
@@ -404,14 +371,14 @@
                     </div>
     
                     <div class="social-icons text-center">
-                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-dark"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-dark"><i class="fab fa-linkedin"></i></a>
                     </div>
     
-                    <div class="message-box">
+                    <div class="message-box mt-2">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">Your Name:</label>
@@ -442,8 +409,153 @@
 </footer>
 
 <!-- Bootstrap scripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<div id="loginModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="close" data-dismiss="modal" onclick="toggleLoginModal()">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+ $(document).ready(function() {
+    // Add 'show' class to each feature box after the page is loaded
+    const featureBoxes = document.querySelectorAll(".feature-box");
+    featureBoxes.forEach(box => box.classList.add("show"));
+
+    var countries = ["France", "Japan", "Australia", "Brazil", "Canada"];
+    var index = 0;
+    var countryElement = $('#country');
+
+    function changeCountry() {
+        countryElement.text(countries[index]);
+        index = (index + 1) % countries.length;
+    }
+
+    // Function to move to the next slide of the carousel
+    function nextSlide() {
+        $('#imageCarousel').carousel('next');
+    }
+
+    // Trigger next slide every 3 seconds
+    setInterval(nextSlide, 3000);
+
+    $('#imageCarousel').on('slid.bs.carousel', function () {
+        changeCountry();
+    });
+
+    changeCountry(); // Initial call to display the first country immediately
+
+    // When mouse enters the user icon or the dropdown menu
+    $('.nav-item.dropdown').on('mouseenter', function() {
+        // Show the dropdown menu
+        $(this).find('.dropdown-menu').slideDown(500);
+    });
+
+    // When mouse leaves the user icon or the dropdown menu
+    $('.nav-item.dropdown').on('mouseleave', function() {
+        // Hide the dropdown menu
+        $(this).find('.dropdown-menu').slideUp(500);
+    });
+     // When mouse enters the user icon or the dropdown menu
+     $('.fas fa-user-circle').on('mouseenter', function() {
+        // Show the dropdown menu
+        $(this).find('.dropdown-menu').slideDown(500);
+    });
+
+    // When mouse leaves the user icon or the dropdown menu
+    $('.fas fa-user-circle').on('mouseleave', function() {
+        // Hide the dropdown menu
+        $(this).find('.dropdown-menu').slideUp(500);
+    });
+
+    var homeLink = document.querySelector(".navbar-nav .nav-item.active .nav-link");
+    var navLinks = document.querySelectorAll(".navbar-nav .nav-link:not(.fs-1)");
+
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            // Remove active class from all links except home link
+            navLinks.forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            // Add active class to the clicked link
+            this.classList.add("active");
+        });
+    });
+});
+
+     // Display the login modal and blur the background on page load
+     window.onload = function () {
+        toggleLoginModal();
+    };
+
+    // Toggle the login modal
+    function toggleLoginModal() {
+        var modal = document.getElementById("loginModal");
+        document.body.classList.toggle("blur-background");
+        modal.style.display = modal.style.display === "block" ? "none" : "block";
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function (event) {
+        var modal = document.getElementById("loginModal");
+        if (event.target == modal) {
+            toggleLoginModal();
+        }
+    };
+    $(document).ready(function() {
+        // When mouse enters the user icon or the dropdown menu
+        $('.nav-item.dropdown').on('mouseenter', function() {
+            // Show the dropdown menu
+            $(this).find('.dropdown-menu').slideDown(500);
+        });
+
+        // When mouse leaves the user icon or the dropdown menu
+        $('.nav-item.dropdown').on('mouseleave', function() {
+            // Hide the dropdown menu
+            $(this).find('.dropdown-menu').slideUp(500);
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        var homeLink = document.querySelector(".navbar-nav .nav-item.active .nav-link");
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link:not(.fs-1)");
+
+        navLinks.forEach(function(link) {
+            link.addEventListener("click", function() {
+                // Remove active class from all links except home link
+                navLinks.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+                // Add active class to the clicked link
+                this.classList.add("active");
+            });
+        });
+    });
+</script>
 </body>
 </html>

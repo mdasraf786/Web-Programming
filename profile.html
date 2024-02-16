@@ -1,0 +1,596 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+            .contact-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .message-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 24px;
+            margin-right: 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        
+        .social-icons a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover i.fab.fa-facebook {
+    color: #1cc3d8; /* Sky Blue */
+}
+
+.social-icons a:hover i.fab.fa-twitter {
+    color: #1E90FF; /* Dodger Blue */
+}
+
+.social-icons a:hover i.fab.fa-instagram {
+    color: #FF69B4; /* Hot Pink */
+}
+
+.social-icons a:hover i.fab.fa-linkedin {
+    color: #000080; /* Navy Blue */
+}
+
+.social-icons a:hover i.fab.fa-github {
+    color: #333; /* Default GitHub color */
+}
+
+        .message-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .profile-section {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        }
+        .edit-profile {
+        cursor: pointer;
+        }
+        .navbar-brand {
+        font-size: 24px; /* Change the font size to your desired value */
+        }
+
+            body {
+                background-color: #f8f9fa; /* Set background color */
+                color: #343a40; /* Set text color */
+            }
+            .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+        
+    }
+    
+
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-weight:500;
+        font-size: 18px;
+    }
+    .dropdown-menu {
+            background-color: white;
+            color: black;
+            font-size: 16px; /* Adjust font size as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+
+        .dropdown-item:hover {
+        /* Light hover effect */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+        #d1,#d2{
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Box shadow for login button */
+        }
+        .profile-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .user-icon {
+        background: linear-gradient(to bottom right, #49afc3, #0e6369);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .user-icon i {
+        font-size: 60px;
+        color: #fff;
+    }
+
+    .username p {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .username, .profile, .login-details ,.logout {
+            border-bottom: 1px solid #1e1515; /* Add bottom border */
+            padding-bottom: 10px ; /* Add some padding for spacing */
+            margin-bottom: 10px; /* Add some margin for spacing */
+        }
+        .profile-section {
+            background-color: #f8f9fa; /* Light gray background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+        
+        .profile-section p {
+            margin: 0;
+        }
+        
+        .username, .profile, .login-details, .logout {
+            border-bottom: 1px solid transparent; /* Transparent border by default */
+        
+        }
+        
+        .username:hover, .profile:hover, .login-details:hover, .logout:hover {
+            background-color: #7ed3e2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        #transparent {
+        background-color: transparent;
+        
+        border-radius: 20px;
+        color: #1b979d; /* Text color */
+    }
+
+    #transparent:hover {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    }
+
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #343a40; /* Dark border color */
+        padding-bottom: 5px; /* Adjust padding as needed */
+        margin-bottom: 15px; /* Adjust margin as needed */
+    }
+
+    /* Optional: Adjust the border color on focus */
+    .form-group label:focus-within,
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="date"]:focus {
+        border-bottom-color: #007bff; /* Change border color on focus */
+    }
+    .form-group input{
+        border-top:none;
+        border-left:none;
+        border-right:none;
+        background-color: transparent;
+    }
+    label {
+        font-family:  sans-serif; /* Change font family */
+        font-size: 14px; /* Change font size */
+        color: #555; /* Change text color */
+    }
+
+    /* Style for input tags */
+    input[type="text"], input[type="email"], input[type="date"] {
+        font-family: Arial, sans-serif; /* Change font family */
+        font-size: 14px; /* Change font size */
+        color: #333; /* Change text color */
+        border: 1px solid #ccc; /* Add border */
+        border-radius: 4px; /* Add border radius */
+        padding: 8px; /* Add padding */
+    }
+   
+
+
+
+    
+    </style>
+    </head>
+    <body>
+        <div class="container" style="padding-top: 100px;"> <!-- Add padding to the top -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+                <a class="navbar-brand" href="#"><i class="fas fa-globe" style="font-size:30px;"></i> Adventour</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link fs-1" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i> <!-- FontAwesome user-circle icon -->
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <div class="dropdown-header text-center">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-12 text-center">
+                                            <i class="fas fa-user-circle text-dark"></i> 
+                                            <!-- <img src="travel.1.jpeg" class="rounded-circle" style="width: 80px; height: 80px;" alt="User Image"> -->
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-12 text-center">
+                                            <a href="#" class="btn btn-light btn-sm mt-2 text-info shadow" id="b1"><i class="fas fa-sign-in-alt text-dark"></i> Login</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Profile</a>
+                                <a class="dropdown-item text-info" href="#"><i class="fas fa-sign-out-alt text-dark"></i> Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="container mt-2 ">
+            <div class="row">
+                <!-- Left Column - Profile Section -->
+                <div class="col-md-3 ">
+                    <div class="profile-section ">
+                        <!-- User Icon with Background Gradient -->
+                        <div class="user-icon">
+                            <a href=""><i class="fas fa-user"></i></a>
+                        </div>
+                        
+                        <!-- Username -->
+                        <div class="username">
+                            <p>User Name</p>
+                        </div>
+                        
+                        <!-- Profile with Icon -->
+                        <div class="profile">
+                            <a href="#p1" class="text-dark text-decoration-none"><i class="fas fa-user"></i> Profile</a>
+                        </div>
+                        
+                        <!-- Login Details -->
+                        <div class="login-details">
+                            <a href="#p2" class="text-dark text-decoration-none"><i class="fas fa-sign-in-alt"></i> Login Details</a>
+                        </div>
+                        
+                        <!-- Logout -->
+                        <div class="logout">
+                            <a href="" class="text-dark text-decoration-none"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Form Section -->
+                <div class="col-md-9" id="p1">
+                    <div class="profile-section ">
+                        
+
+                        <div class="row">
+                            <!-- Profile Heading -->
+                            <div class="col-md-2">
+                                <h2>Profile</h2>
+                            
+                            </div>
+                            
+                            <!-- Button -->
+                            <div class="col-auto ml-auto">
+                                <button class="btn  edit-profile btn-toggle" id="transparent"><i class="fas fa-edit"></i> Edit</button>
+                            </div>
+                        
+                        </div>
+                    
+                    
+                        
+                        
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" value="John Doe" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="birthday" class="col-sm-2 col-form-label">Birthday:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="birthday" value="January 1, 1990" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="address" class="col-sm-2 col-form-label">Address:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="address" value="123 Main St, City, Country" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="email" value="johndoe@example.com" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="country" class="col-sm-2 col-form-label">Country:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="country" value="United States" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="state" class="col-sm-2 col-form-label">State:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="state" value="California" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            
+                            
+                        
+                        </div>
+                        
+                        <!-- Edit Form -->
+                        <div class="edit-form mt-3" style="display: none;">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <!-- Add other form fields here -->
+                                <div class="form-group">
+                                    <label for="birthday">Birthday</label>
+                                    <input type="date" class="form-control" id="birthday">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                </div>
+                                <button type="submit" class="btn" id="transparent">Save</button>
+                                <button type="submit" class="btn" id="transparent">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left Column - Profile Section -->
+                <div class="col-md-3">
+                   
+                   
+                    </div>
+              
+                
+                <!-- Right Column - Form Section -->
+                <div class="col-md-9" id="p2">
+                    <div class="profile-section s">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2>Login Details</h2>
+                            </div>
+                        </div>
+                      
+                        
+                       
+                        
+                      <!-- Login Details Form -->
+<div class="form-group row">
+    <label for="mobile" class="col-sm-2 col-form-label">Number:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="mobile">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" id="email">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="password" class="col-sm-2 col-form-label">Password:</label>
+    <div class="col-sm-10">
+        <div class="input-group">
+            <input type="password" class="form-control" id="password">
+            <div class="input-group-append">
+                <a href="#" class="btn text-primary">Change Password?</a>
+            </div>
+        </div>
+        <div id="changePasswordForm" style="display: none;">
+            <!-- Form for changing password -->
+            <form>
+                <div class="form-group">
+                    <label for="oldPassword">Old Password</label>
+                    <input type="password" class="form-control" id="oldPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+                        
+                        <!-- Buttons -->
+                       
+                            
+                            
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <footer class="text-center bg-info py-4">
+                <section class="contact-section bg-info-subtle">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="contact-details text-center">
+                                    <h2><SPAN class="text-info">C</SPAN>ontact <SPAN class="text-info">U</SPAN>s</h2>
+                                    <p>We'd love to hear from you. Reach out to us using the contact details below or send us a message.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-phone"></i> Phone: +7781826301</li>
+                                        <li><i class="fas fa-envelope"></i> Email: info@example.com</li>
+                                    </ul>
+                                </div>
+                
+                                <div class="social-icons text-center">
+                                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                
+                                <div class="message-box">
+                                    <form id="contactForm" novalidate>
+                                        <div class="form-group">
+                                            <label for="name">Your Name:</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Your Email:</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Your Message:</label>
+                                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="navbar bg-info navbar-expand-lg navbar-dark text-center">
+                    <p class="text-center m-0">&copy; 2023 Adventour. All rights reserved.</p>
+                    
+                </div>
+                
+                
+                
+            </footer>
+            
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+     
+
+        $(document).ready(function() {
+            // Toggle edit form when the edit button is clicked
+            $('.edit-profile.btn-toggle').click(function() {
+                $('.edit-form').toggle(); // Toggle the visibility of the edit form
+            });
+        });
+
+    
+        $(document).ready(function() {
+        // When mouse enters the user icon or the dropdown menu
+        $('.nav-item.dropdown').on('mouseenter', function() {
+            // Show the dropdown menu
+            $(this).find('.dropdown-menu').slideDown(500);
+        });
+
+        // When mouse leaves the user icon or the dropdown menu
+        $('.nav-item.dropdown').on('mouseleave', function() {
+            // Hide the dropdown menu
+            $(this).find('.dropdown-menu').slideUp(500);
+        });
+    });
+
+    </script>
+
+    </body>
+    </html>
