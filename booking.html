@@ -285,7 +285,7 @@ a{
 <div class="jumbotron jumbotron-fluid text-center mt-5">
   <div class="container ">
       
-          <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Your <span class="text-info" id="booking"></span> Awaits</h1>
+          <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Your <span class="text-info" id="booking"></span><br> Awaits</h1>
       <p class="lead" style="color:black;font-family:Comic Sans MS,cursive;">Current Travel Provided By Our Agency</p>
       <a class="btn btn-primary btn-lg" href="#book" role="button">Book Now</a>
       </div>
@@ -433,7 +433,7 @@ a{
 
 <script>
 $(document).ready(function(){
-    var text = "Booking";
+    var text = "Booking...";
     var index = 0;
     var interval = setInterval(function() {
         $('#booking').append(text[index]);
