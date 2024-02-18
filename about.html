@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
+  <title>About Us</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-KyQ6GHCY/dqoOX/L0/+IyOgiZbkEAdGFV6ko8PR1DwxqXz3gmENlPGu6FwR5IVfeP1T3bcsS+1c02zwxpD0SsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
        .jumbotron {
             background-image: url('your-background-image.jpg'); /* Set your background image URL */
@@ -59,7 +61,7 @@
     font-size: 18px;
 }
        
-        .contact-section {
+.contact-section {
             padding: 80px 0;
             background-color: #2caab3;
         }
@@ -99,7 +101,7 @@
         }
 
         .social-icons a {
-            color: #f5ebeb;
+           
             font-size: 20px;
             margin-right: 15px;
             transition: color 1s ease-in-out;
@@ -139,6 +141,13 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+.social-icons a:hover i.fab.fa-whatsapp {
+    color: rgb(8, 169, 40)/* Default GitHub color */
+}
+
+
+
+       
 
    
         .dropdown-menu {
@@ -272,28 +281,164 @@ a{
   #d1,#d2{
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Box shadow for login button */
     }
-    .card {
+    .featured-tours {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.featured-tours h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.featured-tours p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.featured-tours .card {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.featured-tours .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+.featured-tours .card-title {
+    margin-bottom: 10px;
+}
+.featured-tours .card-subtitle {
+    margin-bottom: 20px;
+}
+.featured-tours .card-text span {
+    color: #f00;
+    font-weight: bold;
+}
+.featured-tours .card-text del {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.featured-tours .card-text small {
+    font-size: 14px;
+}
+.feature-box {
+            opacity: 0;
+            transform: translateY(500px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .feature-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feature-box:hover {
+            transform: scale(1.1);
+        }
+
+  
+        .feature-box:hover i {
+            transform: scale(1.1);
+        }
+        .card {
         opacity: 0; /* Initially hidden */
         transition: opacity 0.3s ease, transform 0.5s ease;
     }
-
-    /* .slide-in {
-        opacity: 1;
-        transform: translateX(0);
+     /* Custom CSS for Guide Cards */
+     .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      color: #666;
+      font-size: 0.9rem;
     }
 
-    @keyframes slideFromLeft {
-        from {
-            transform: translateX(-100%);
-        }
-        to {
-            transform: translateX(0);
-        }
+    /* Custom CSS for Social Icons Section */
+    .social-icons a {
+      color: #555;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+    .card img {
+      width: 90%;
+      height: 50%;
+      object-fit: cover;
+      border-bottom: 1px solid #f0f0f0;
+      /* Make the image circular */
+      border-radius: 50%;
+      margin-left: 20px;
+      
+    }
+    /* Custom CSS for Guide Cards */
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+    
+     
+      border-bottom: 1px solid #49b4bc;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      color: #666;
+      font-size: 0.9rem;
     }
 
-    .slide-in {
-        animation: slideFromLeft 0.5s ease-in-out;
-    } */
+    /* Custom CSS for Social Icons Section */
+    #s1 {
+      display: none; /* Hide icons by default */
+    }
+     /* Custom CSS can be added here */
+     .review-card {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    }
+    .review-card .header-icon {
+      font-size: 24px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .review-card .user-avatar img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
     </style>
 </head>
 
@@ -314,7 +459,7 @@ a{
                     <a class="nav-link" href="booking.html">Book</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="packeges.html">Packages</a>
+                    <a class="nav-link" href="#">Packages</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="servises.html">Services</a>
@@ -323,8 +468,8 @@ a{
                     <a class="nav-link" href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-              </li>
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-user-circle"></i> <!-- FontAwesome user-circle icon -->
@@ -356,98 +501,246 @@ a{
 <div class="jumbotron jumbotron-fluid text-center mt-5">
   <div class="container ">
       
-          <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Your <span class="text-info" id="booking"></span> <br>Awaits</h1>
+          <h1 class="display-4" style="color:black;font-family:Comic Sans MS,cursive;">Something <span class="text-info" id="booking"></span><br> Us</h1>
       <p class="lead" style="color:black;font-family:Comic Sans MS,cursive;">Current Travel Provided By Our Agency</p>
       <a class="btn btn-primary btn-lg" href="#book" role="button">Book Now</a>
       </div>
       
       
   </div>
-</div>
+</div> 
 
-<div class="container">
-    <div class="row">
+  <section class="featured-tours" >
+    <div class="container" >
+        <h2 class="text-center mb-3 text-info"  style="font-family:Comic Sans MS,cursive;">~For Our Sake~</h2>
+        
         <div class="col">
-          <h1 class=" mt-3 mb-5 ml-1 text-center" id="heading" style="color:black;font-family:Comic Sans MS,cursive;"> <span class="text-info">S</span>ervices</h1>
-          <p class="mb-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod vero sint, aliquam hic ipsa assumenda optio a fugit fugiat repellendus nihil, architecto aut et iure, nostrum impedit alias tempora sunt!</p>
+            <h1 class="text-center mb-4" style="font-family:Comic Sans MS,cursive;">Welcome To <a class="navbar-brand" href="#"><i class="fas fa-globe text-info"style="font-size:40px;"></i> </a>Adventour</h1>
         </div>
-      </div>
-    <div class="row">
-  
-      <!-- Hotel Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card hotel-card">
-          <i class="fas fa-hotel icon " style="font-size:100px;padding-left:15px;padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Affordable Hotel</h5>
-            <p class="card-text">Find comfortable accommodation for your stay.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
+        <div class="container" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);">
+            <div class="row">
+                
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6 mt-3" >
+                    <video width="100%" controls>
+                        <iframe width="560" height="350" src="https://www.youtube.com/embed/yNGmi7o6orw?si=FQ9s39ehlPBm_r2P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <h4 class="ml-4" style="color:black;font-family:Comic Sans MS,cursive;"><span class="text-info" >A</span>bout <SPAN class="text-info">U</SPAN>s <span class="text-info">~</span></h4>
+                    <p class="text-center" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque labore maxime est quo, odit explicabo dolor ab nisi voluptatem eligendi facilis illum voluptatibus fugit architecto, obcaecati quos, perspiciatis non? Excepturi.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque labore maxime est quo, odit explicabo dolor ab nisi voluptatem eligendi facilis illum voluptatibus fugit architecto, obcaecati quos, perspiciatis non? Excepturi. <br><button type="submit" class="btn btn-info btn btn-outline-light btn-social mt-3 ">Read More</button>
+                    </p>
+                    
+                </div>
+                
+            </div>
         </div>
-      </div>
-  
-      <!-- Flight Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card flight-card">
-          <i class="fas fa-plane icon" style="font-size:100px;padding-left:15px;padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Fastest Flight</h5>
-            <p class="card-text">Discover amazing destinations with our flight services.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Train Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card train-card">
-          <i class="fas fa-train icon" style="font-size:100px;padding-left:15px;padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Memorable Travel</h5>
-            <p class="card-text">Experience the charm of train and its journeys.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Food & Drinks Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card food-card">
-          <i class="fas fa-utensils icon" style="font-size:100px;padding-left:15px;padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Food & Drinks</h5>
-            <p class="card-text">Indulge in delicious meals and refreshing drinks.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Safety Guide Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card safety-card">
-          <i class="fas fa-shield-alt icon" style="font-size:100px;padding-left:15px; padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Safety Guide</h5>
-            <p class="card-text">Stay informed about safety measures during your travels.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Adventure Tour Card -->
-      <div class="col-sm-6 col-md-4 mb-4">
-        <div class="card adventure-card">
-          <i class="fas fa-mountain icon" style="font-size:100px;padding-left:15px;padding-top: 15px;"></i>
-          <div class="card-body">
-            <h5 class="card-title">Adventure Tour</h5>
-            <p class="card-text">Embark on thrilling adventures and create unforgettable memories.</p>
-            <a href="#" class="btn btn-light btn-block mt-3 text-info text-bold" id="d2">Use Now</a>
-          </div>
-        </div>
-      </div>
-  
+       
     </div>
+</section>
+<section class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-3 text-info" style="font-family:Comic Sans MS,cursive;">~Company Member~</h3>
+        <h1 class="text-center mb-3 text-dark mb-3" style="font-family:Comic Sans MS,cursive;">Our Talented Guides</h1>
+      <div class="row">
+        <!-- Guide Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="guide1.jpg" class="card-img-top" alt="Guide 1 Image">
+            <div class="card-body">
+              <h5 class="card-title">Highlighted Name</h5>
+              <p class="card-text">Description about the guide goes here.</p>
+            </div>
+            <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+              <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="guide1.jpg" class="card-img-top" alt="Guide 1 Image">
+              <div class="card-body">
+                <h5 class="card-title">Highlighted Name</h5>
+                <p class="card-text">Description about the guide goes here.</p>
+              </div>
+              <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+                <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="a.jpg" class="card-img-top mt-2 " alt="Guide 1 Image" style="height: 300px;">
+              <div class="card-body">
+                <h5 class="card-title">Highlighted Name</h5>
+                <p class="card-text">Description about the guide goes here.</p>
+              </div>
+              <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+                  <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+                  <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+                  <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+                  <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+                </div>
+            </div>
+            
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="guide1.jpg" class="card-img-top" alt="Guide 1 Image">
+              <div class="card-body">
+                <h5 class="card-title">Highlighted Name</h5>
+                <p class="card-text">Description about the guide goes here.</p>
+              </div>
+              <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+                <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+                <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+              </div>
+            </div>
+            
+          </div>
+  
+        <!-- Guide Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="guide2.jpg" class="card-img-top" alt="Guide 2 Image">
+            <div class="card-body">
+              <h5 class="card-title">Highlighted Name</h5>
+              <p class="card-text">Description about the guide goes here.</p>
+            </div>
+            <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+              <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+            </div>
+          </div>
+         
+        </div>
+  
+        <!-- Guide Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="guide3.jpg" class="card-img-top" alt="Guide 3 Image">
+            <div class="card-body">
+              <h5 class="card-title">Highlighted Name</h5>
+              <p class="card-text">Description about the guide goes here.</p>
+             
+            </div>
+            <div class="text-center mt-1 social-icons bg-info pt-25" id="s1">
+              <a href="#" class="text-light"><i class="fab fa-facebook fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-twitter fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-instagram fa-lg mx-2 "></i></a>
+              <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg mx-2 "></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Social Icons Section -->
+      
+    </div>
+  </section>
+<!-- review section -->
+
+  <div class="container" >
+      <div class="row">
+        <div class="col-md">
+          <h3 class="text-center mb-3 text-info" style="font-family:Comic Sans MS,cursive;">~Why?  <a class="navbar-brand" href="#"><i class="fas fa-globe text-dark"style="font-size:30px;"></i></a>Adventour~</h3>
+          <h1 class="text-center mb-1 text-dark mb-4" style="font-family:Comic Sans MS,cursive;">Our Consumers Reviews...</h1>
+      </div>
+      </div>
+      
+      <div class="row">
+
+        <!-- Review Card 1 -->
+        <div class="col-md-6" >
+          <div class="review-card">
+            <div class="header-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis odio vitae ligula dictum scelerisque.</p>
+            </div>
+            <div class="user-info d-flex align-items-center">
+              <div class="user-avatar">
+                <img src="a.jpg" alt="User Avatar">
+              </div>
+              <div class="user-details">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" >
+          <div class="review-card">
+            <div class="header-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis odio vitae ligula dictum scelerisque.</p>
+            </div>
+            <div class="user-info d-flex align-items-center">
+              <div class="user-avatar">
+                <img src="avatar1.jpg" alt="User Avatar">
+              </div>
+              <div class="user-details">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="review-card">
+            <div class="header-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis odio vitae ligula dictum scelerisque.</p>
+            </div>
+            <div class="user-info d-flex align-items-center">
+              <div class="user-avatar">
+                <img src="avatar1.jpg" alt="User Avatar">
+              </div>
+              <div class="user-details">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="review-card">
+            <div class="header-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis odio vitae ligula dictum scelerisque.</p>
+            </div>
+            <div class="user-info d-flex align-items-center">
+              <div class="user-avatar">
+                <img src="avatar1.jpg" alt="User Avatar">
+              </div>
+              <div class="user-details">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Repeat the above card structure for additional reviews -->
+    
+      </div>
   </div>
+<!-- End of review section -->
+
 <!-- Footer -->
 <footer class="text-center py-4 ">
   <section class="contact-section bg-ligh-subtle">
@@ -463,7 +756,7 @@ a{
                       </ul>
                   </div>
   
-                  <div class="social-icons text-center">
+                  <div class="social-icons text-center" >
                       <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-facebook"></i></a>
                       <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-twitter"></i></a>
                       <a href="#" target="_blank" class="btn btn-outline-dark btn-social text-info"><i class="fab fa-github"></i></a>
@@ -498,7 +791,6 @@ a{
   
   
 </footer>
-
 <!-- Bootstrap scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -532,7 +824,34 @@ a{
 </div> -->
 
 <script>
- $(document).ready(function() {
+   $(document).ready(function() {
+        // Clone the review cards and append them to the review section
+        $('.review-card').clone().appendTo('#reviewSection');
+
+        // Set the initial position of the review section
+        var position = 0;
+        var cardWidth = $('.review-card').outerWidth(true);
+        $('#reviewSection').css('left', position);
+
+        // Set the interval for auto-scrolling
+        var interval = setInterval(function() {
+            position -= cardWidth;
+            $('#reviewSection').animate({left: position}, 1000, function() {
+                if (position <= -($('#reviewSection').width() / 2)) {
+                    position = 0;
+                    $('#reviewSection').css('left', position);
+                }
+            });
+        }, 3000); // Change cards every 3 seconds (adjust as needed)
+    });
+     $(document).ready(function(){
+    $(".card").hover(function(){
+      $(this).find('.social-icons').fadeIn();
+    }, function(){
+      $(this).find('.social-icons').fadeOut();
+    });
+  });
+    $(document).ready(function() {
         // Animate each card's entry
         $('.card').each(function(index) {
             // Store a reference to the card
@@ -550,7 +869,7 @@ a{
         });
     });
 $(document).ready(function(){
-    var text = "Services...";
+    var text = "About...";
     var index = 0;
     var interval = setInterval(function() {
         $('#booking').append(text[index]);
